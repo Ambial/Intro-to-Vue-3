@@ -39,12 +39,7 @@ app.component('product-display', {
           Add to Cart
         </button>
 
-        <div v-for="(review, index) in reviews"
-        :key="index">
-          <h4>{{review.name}}</h4>
-          <p>{{review.review}}</p>
-          <p>{{review.rating}}</p>
-        </div>
+        <review-list :reviews="reviews"/>
 
       </div>
     </div>

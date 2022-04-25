@@ -27,6 +27,9 @@ app.component('review-form', {
       rating: null
     }
   },
+  created () {
+    console.log('ReviewForm created!')
+  },
   methods: {
     onSubmit(){
       const productReview = {
