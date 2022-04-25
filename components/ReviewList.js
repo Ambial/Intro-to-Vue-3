@@ -1,7 +1,9 @@
 app.component('review-list', {
     template:
     /*html*/
-    `<ul>
+    `<div class="review-container">
+    <h3>Reviews:</h3>
+    <ul>
         <li v-for="(review, index) in reviews"
         :key="index">
             <div >
@@ -10,7 +12,8 @@ app.component('review-list', {
                 <p>{{review.rating}}</p>
             </div>
         </li>
-    </ul>`,
+    </ul>
+    </div>`,
     props: {
         reviews: {
             type: Array,
