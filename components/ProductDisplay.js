@@ -39,7 +39,8 @@ app.component('product-display', {
           Add to Cart
         </button>
 
-        <review-list :reviews="reviews"/>
+        <review-list v-if="reviews.length" 
+        :reviews="reviews"/>
 
       </div>
     </div>
