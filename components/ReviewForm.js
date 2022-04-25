@@ -27,16 +27,19 @@ app.component('review-form', {
       rating: null
     }
   },
-  created () {
-    console.log('ReviewForm created!')
-  },
   methods: {
     onSubmit(){
+      if (this.name === '' || this.review === '' || this.rating === null) {
+        alert('Review is incomplete. Please fill out every field.')
+        return
+      }
+
       const productReview = {
         name: this.name,
         review: this.review,
         rating: this.rating
       }
+
       this.$emit('review-submitted', productReview)
       this.resetData()
     },
